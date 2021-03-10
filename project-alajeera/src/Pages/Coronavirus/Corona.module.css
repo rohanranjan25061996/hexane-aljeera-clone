@@ -45,9 +45,7 @@
 .item5 {
   grid-area: e;
 }
-.top > div {
-  /* border: black 1px solid; */
-}
+
 .bigImage {
   height: 300px;
   border: pink 1px solid;
@@ -57,8 +55,7 @@
 
   border: purple 1px solid;
 }
-.smallImage {
-}
+
 .ads{
     height: 200px;
     width: 50px;

@@ -1,11 +1,10 @@
 import './App.css';
-import Coronavirus from './Pages/Coronavirus/Coronavirus';
+import { AllRoutes } from './Routes/Routes';
 
 function App() {
   return (
     <div className="App">
-     <h1> Hi </h1>
-     <Coronavirus/>
+      <AllRoutes />
     </div>
   );
 }

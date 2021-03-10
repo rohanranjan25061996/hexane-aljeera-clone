@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAds, getHealthNews } from "../../Redux/action";
-import NewsCard from "./NewsCard";
+
 import styles from "./Corona.module.css";
-import BigCard from "./BigCard";
+
 import Advetisement from "../Advetisement";
 //4462cfb164cd00d0ee49f9176a359747
 const Coronavirus = () => {
