@@ -1,14 +1,11 @@
 import './App.css';
-import { FooterContainer } from './Common/Footer/Containers/Footer';
-import Navbar from './Common/Navbar/Navbar';
-import {BrowserRouter as Router} from 'react-router-dom'
+import { AllRoutes } from './Routes/Routes';
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      {/* <FooterContainer/> */}
-    </Router>  
+    <div className="App">
+      <AllRoutes />
+    </div>
   );
 }
 
