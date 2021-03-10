@@ -7,7 +7,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      {/* <FooterContainer/> */}
+      <FooterContainer/>
     </Router>  
   );
 }
