@@ -1,10 +1,14 @@
 import './App.css';
+import { FooterContainer } from './Common/Footer/Containers/Footer';
+import Navbar from './Common/Navbar/Navbar';
+import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (
-    <div className="App">
-     <h1> Hi </h1>
-    </div>
+    <Router>
+      <Navbar />
+      {/* <FooterContainer/> */}
+    </Router>  
   );
 }
 
