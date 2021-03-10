@@ -1,5 +1,5 @@
 import React from 'react';
-import Footer from '../Footer/index'
+import Footer from '../Footer/FooterContent'
 import { Icon } from '../Icons/Styles/icons';
 
 function FooterContainer() {
