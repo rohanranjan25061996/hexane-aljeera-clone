@@ -1,0 +1,116 @@
+.content__main {
+  width: 50%;
+  margin-left: 20%;
+}
+
+.content__show__data {
+  width: 80%;
+}
+
+.content__show__data > p {
+  text-align: left;
+  width: 100%;
+}
+
+.content__show__data > img {
+  text-align: left;
+  border: 5px solid black;
+}
+.main__contentShow {
+  width: 50%;
+  margin-left: 20%;
+  text-align: left;
+  line-height: 40px;
+  font-size: 23px;
+  word-spacing: 10px;
+}
+
+/* S - Headers */
+
+.header__main {
+  width: 50%;
+  text-align: left;
+  margin-left: 20%;
+  margin-top: 1%;
+}
+
+.header__main > h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+.header__main > p {
+  font-size: 28px;
+  color: #8d8d90;
+  line-height: 40px;
+}
+
+/* E - Headers */
+
+/* S - Realted Show */
+
+.related__show__data {
+  /* border: 1px solid green; */
+}
+
+.realted__head {
+  width: 12%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20%;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.related__text,
+.most__read__text {
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.related__dot,
+.most__read__dot {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: #ed8e02;
+}
+
+.show__related__table {
+  width: 50%;
+  margin-left: 20%;
+  text-align: left;
+}
+
+.show__related__table table {
+  width: 100%;
+}
+
+/* E - Realted Show */
+
+/* S - Most Raed Show */
+
+.most__read__main {
+  width: 15%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 20%;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.most__read__data {
+  width: 60%;
+  margin-left: 20%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.most__read__data > div > h3 {
+  cursor: pointer;
+}
+h3 :hover {
+  text-decoration: underline;
+}
+
+/* E - Most Read Show */
