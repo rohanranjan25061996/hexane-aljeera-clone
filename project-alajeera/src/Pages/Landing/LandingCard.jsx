@@ -4,7 +4,7 @@ const LandingCard = ({ title, description, image, source, country }) => {
   return (
     <div className='card'>
       <div>
-        <img width='280px' src={image} alt='news card' />
+        <img width='200px' src={image} alt='news card' />
       </div>
       <div>
         <h1>{title}</h1>
