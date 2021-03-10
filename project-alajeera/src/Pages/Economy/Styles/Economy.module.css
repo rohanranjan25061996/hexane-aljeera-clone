@@ -1,0 +1,134 @@
+.top {
+  width: 100%;
+}
+
+.top__2 {
+  width: 30%;
+  border: 1px solid red;
+  margin-left: 10%;
+  margin-top: 2%;
+  display: flex;
+}
+
+.main__page__main {
+  width: 80%;
+  margin: 1% auto;
+}
+.main__page__container {
+  width: 100%;
+}
+.head__side__eco {
+  width: 100%;
+}
+
+.head__side__eco > .header {
+  float: left;
+}
+
+.header {
+  width: 45%;
+  clear: both;
+  padding: 3%;
+}
+
+.side {
+  width: 48%;
+  margin-top: 2%;
+  display: flex;
+  padding: 0.5%;
+}
+
+.showall {
+  width: 50%;
+  padding: 1%;
+}
+
+.showall table {
+  width: 98%;
+}
+
+.showall tr {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 1%;
+  width: 70%;
+}
+
+h2:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+  .head__side__eco > .header {
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 60%;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 1%;
+    margin-left: 10%;
+  }
+
+  .showall {
+    margin-left: 10%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .head__side__eco > .header {
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 60%;
+    width: 100%;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 100%;
+  }
+
+  .showall {
+    margin-left: 1%;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .head__side__eco > .header {
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 60%;
+    width: 100%;
+  }
+
+  .side {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 100%;
+  }
+
+  .showall {
+    margin-left: 1%;
+    width: 100%;
+  }
+}
