@@ -2,7 +2,7 @@ import React from 'react';
 import Footer from '../Footer/index'
 import { Icon } from '../Icons/Styles/icons';
 
-export function FooterContainer() {
+function FooterContainer() {
     return (
         <Footer>
             <Footer.Wrapper>
@@ -68,5 +68,7 @@ export function FooterContainer() {
         </Footer>
     )
 }
+
+export {FooterContainer}
 
 
