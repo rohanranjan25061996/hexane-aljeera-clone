@@ -15,7 +15,7 @@ function Subscribe(){
             let ok = validateEmail(email)
             if(ok){
 
-                let msg = {message: "You got subscription from ALAJEERA-CLONE website for latest news.", from_name: email, reply_to: email, to_name: "Rohan Ranjan"}
+                let msg = {message: `${email} apply subscription for latest news.`, from_name: email, reply_to: email, to_name: "Rohan Ranjan"}
             window.emailjs.send(
                 "default_service",
                 'template_wdw9f3m',
@@ -23,7 +23,7 @@ function Subscribe(){
             )
             .then((res) =>{
                 console.log(res)
-                alert("Feedback Sent successfully")
+                alert("Subscription Applied Successfully")
                 setEmail("")
                 window.location.reload()
             })

@@ -7,6 +7,12 @@ import { ShowEco } from "../Economy/ShowEco";
 import { SideEco } from "../Economy/SideEco";
 import styles from "../Economy/Styles/Economy.module.css"
 import { useHistory } from "react-router";
+import Loader from "react-loader-spinner"
+import { FooterContainer } from "../../Common/Footer/Containers/Footer";
+
+const footer_styles = {
+    marginTop: "50%"
+} 
 
 function Corona(){
 
@@ -35,7 +41,11 @@ function Corona(){
     return(
         <>
         <div className = {styles.main__page__main}>
-            {isLoading ? "...loading" : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
+            {isLoading ? <Loader type="Bars"
+        color="#00BFFF"
+        height={100}
+        width={100}
+        timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
                 {
                     data?.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>
                         {i === 0 ? <div className = {styles.header}>  <HeaderData {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </div> 
@@ -43,6 +53,9 @@ function Corona(){
                     </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
+        </div>
+        <div style = {isLoading ? footer_styles: null}>
+           <FooterContainer />
         </div>
         </>
     )
