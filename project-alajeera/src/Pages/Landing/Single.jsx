@@ -1,8 +1,8 @@
 import React from 'react';
-
+import styles from './Landing.module.css';
 const Single = ({ title, author, description, image, country, source }) => {
   return (
-    <div className='single__card'>
+    <div className={styles.single__card}>
       <div>
         <h1>{title}</h1>
         <p>{description}</p>

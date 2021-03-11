@@ -1,0 +1,23 @@
+.vid_card {
+  padding: 3%;
+  margin: 25px auto;
+  font-size: x-large;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  width: 700px;
+}
+.header {
+  width: 1120px;
+  margin: 2% auto !important;
+  display: flex;
+}
+.header > div:nth-child(1) {
+  width: 850px !important;
+  padding: 1%;
+  margin: 25px 14px;
+  font-size: x-large;
+}
+.header > div > div {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding: 5px;
+  margin-bottom: 10px;
+}

@@ -1,7 +1,6 @@
 .top {
   width: 100%;
 }
-
 .top__2 {
   width: 30%;
   border: 1px solid red;
@@ -9,7 +8,6 @@
   margin-top: 2%;
   display: flex;
 }
-
 .main__page__main {
   width: 80%;
   margin: 1% auto;
@@ -20,44 +18,45 @@
 .head__side__eco {
   width: 100%;
 }
-
 .head__side__eco > .header {
   float: left;
 }
-
 .header {
   width: 45%;
   clear: both;
   padding: 3%;
 }
-
+.header__main__eco__text {
+  padding: 3%;
+}
 .side {
-  width: 48%;
+  width: 47%;
   margin-top: 2%;
+  margin-left: 1%;
   display: flex;
   padding: 0.5%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
-
+td > h2 {
+  padding: 2%;
+}
 .showall {
   width: 50%;
   padding: 1%;
+  margin-top: 1%;
 }
-
 .showall table {
   width: 98%;
 }
-
 .showall tr {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   padding: 1%;
   width: 70%;
 }
-
 h2:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-
 @media only screen and (max-width: 1024px) {
   .head__side__eco > .header {
     clear: both;
@@ -65,7 +64,6 @@ h2:hover {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     width: 60%;
   }
-
   .side {
     display: flex;
     flex-direction: column;
@@ -75,12 +73,10 @@ h2:hover {
     margin-top: 1%;
     margin-left: 10%;
   }
-
   .showall {
     margin-left: 10%;
   }
 }
-
 @media only screen and (max-width: 600px) {
   .head__side__eco > .header {
     clear: both;
@@ -89,7 +85,6 @@ h2:hover {
     width: 60%;
     width: 100%;
   }
-
   .side {
     display: flex;
     flex-direction: column;
@@ -100,13 +95,11 @@ h2:hover {
     margin-left: 1%;
     width: 100%;
   }
-
   .showall {
     margin-left: 1%;
     width: 100%;
   }
 }
-
 @media screen and (max-width: 800px) {
   .head__side__eco > .header {
     clear: both;
@@ -115,7 +108,6 @@ h2:hover {
     width: 60%;
     width: 100%;
   }
-
   .side {
     display: flex;
     flex-direction: column;
@@ -126,9 +118,28 @@ h2:hover {
     margin-left: 1%;
     width: 100%;
   }
-
   .showall {
     margin-left: 1%;
     width: 100%;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .head__side__eco > .header {
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    width: 60%;
+  }
+  .side {
+    display: flex;
+    flex-direction: column;
+    clear: both;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    margin-top: 5%;
+    margin-left: 10%;
+  }
+  .showall {
+    margin-left: 10%;
   }
 }

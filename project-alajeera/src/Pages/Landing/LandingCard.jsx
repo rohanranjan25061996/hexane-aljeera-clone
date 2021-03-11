@@ -1,5 +1,5 @@
 import React from 'react';
-import './Landing.css';
+// import './Landing.css';
 const LandingCard = ({ title, description, image, source, country }) => {
   return (
     <div className='card'>

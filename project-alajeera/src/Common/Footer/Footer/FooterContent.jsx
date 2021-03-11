@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Container, Wrapper, Row, Column, Link, Title,Social,Icons,Image, Trademark } from './Styles/Footer';
+import { Container, Wrapper, Row, Column, Link, Title,Social,Icons,Image, Trademark } from './Styles/FooterStyles';
 
 export default function Footer({ children, ...restProps }) {
     return <Container {...restProps}>{children}</Container>
