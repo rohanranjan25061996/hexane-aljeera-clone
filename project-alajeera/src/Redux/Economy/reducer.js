@@ -12,8 +12,6 @@ const initState = {
 
 const economyReducer = ( state = initState, { type, payload } ) => {
 
-    console.log("from reducer  ", type, state.data)
-
     switch(type){
 
         case ECONOMY_API_CALL_REQUEST:{
@@ -57,7 +55,7 @@ const economyReducer = ( state = initState, { type, payload } ) => {
         }
 
         case SAVE_DATA_LS:{
-            const ls_data = localStorage.setItem("eco", JSON.stringify(state.filter_data))
+           localStorage.setItem("eco", JSON.stringify(state.data))
 
             return{
                 ...state

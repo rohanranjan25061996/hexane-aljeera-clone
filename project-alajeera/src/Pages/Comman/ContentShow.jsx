@@ -1,5 +1,6 @@
 import React from "react"
 import styles from "../Comman/Styles/Content.module.css"
+import {Subscribe} from "./Subscribe"
 
 function ContentShow(){
 
@@ -18,6 +19,9 @@ In a statement on Tuesday, the US State Department said Ali Hemmatian and Masoud
             <p>
             The department accused the pair of being involved “in gross violations of human rights, namely the torture and/or cruel, inhuman, or degrading treatment or punishment of political prisoners and persons detained during protests in 2019 and 2020 in Iran”.
             </p>
+        </div>
+        <div className = {styles.subscribe__inside__contentshow} >
+            <Subscribe />
         </div>
         <div>
             <p>
