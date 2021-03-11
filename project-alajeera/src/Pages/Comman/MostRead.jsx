@@ -19,7 +19,6 @@ function MostRead(){
         })
 
         setData(local_data)
-        console.log("local sort data  ", local_data)
     }
 
     const redirectTo = (id) => {

@@ -47,6 +47,7 @@ const getEconomyData = () => dispatch => {
     })
     .then((res) => {
         dispatch( economyCallSuccess(res.data) )
+        console.log("economy data   ",res.data)
         return { success: true }
     })
     .catch((err) => {

@@ -71,7 +71,7 @@ function Navbar() {
                             }
                         </li>
                         <li className='nav-item'>
-                            <Link to='/coronavirus' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/corona' className='nav-links' onClick={closeMobileMenu}>
                             Coronavirus
                             </Link>
                         </li>
