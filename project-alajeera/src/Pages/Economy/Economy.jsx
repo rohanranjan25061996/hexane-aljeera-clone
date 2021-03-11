@@ -6,6 +6,7 @@ import { ShowEco } from "./ShowEco";
 import { SideEco } from "./SideEco";
 import styles from "../Economy/Styles/Economy.module.css"
 import { useHistory } from "react-router";
+import { FooterContainer } from "../../Common/Footer/Containers/Footer";
 
 function Economy(){
 
@@ -42,6 +43,9 @@ function Economy(){
                     </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
+        </div>
+        <div>
+            <FooterContainer />
         </div>
         </>
     )

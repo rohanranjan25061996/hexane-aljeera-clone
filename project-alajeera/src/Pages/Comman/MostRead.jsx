@@ -1,14 +1,11 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import { useHistory } from "react-router";
-import { incViewCount } from "../../Redux/Economy/action";
 import styles from "../Comman/Styles/Content.module.css"
 
 function MostRead(){
 
     const [data, setData] = React.useState(null)
     const history = useHistory()
-    const dispatch = useDispatch()
 
     React.useEffect(() => {
         getData()
@@ -29,7 +26,6 @@ function MostRead(){
         history.push(`/economy/${id}`)
         window.location.reload()
         window.scrollTo(0, 0)
-        dispatch( incViewCount() )
     }
     return(
         <>
