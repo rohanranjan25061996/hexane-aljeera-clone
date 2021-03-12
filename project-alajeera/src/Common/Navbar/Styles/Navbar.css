@@ -2,12 +2,14 @@
     background: white;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05),
      0px 20px 20px rgba(0, 0, 0, 0.01);
+    position: sticky;
+    top: 0;
 }
 .navbar {
     display: flex;
     font-size: 1.2rem;
     border: 0px solid rgb(216, 18, 0);
-    width: 95%;
+    width: 80%;
     margin: auto;
     justify-content: space-around;
     background: white;
@@ -21,7 +23,7 @@
     gap:20px;
     justify-content: center;
     align-items: center;
-    flex: 10%;
+    flex: 20%;
 }
 
 .navbar-logo-div {
@@ -29,6 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0px solid black;
 }
 
 .navbar-logo-div img {
@@ -46,7 +49,7 @@
     display: flex;
     flex:80%;
     align-items: center;
-    gap: 8%;
+    gap: 5%;
 }
 
 .nav-item {
@@ -97,11 +100,10 @@
 
 .input-nav{
     width: 100%;
-    background-color: #F7F7F7;
-    
+    background-color: #F7F7F7;    
 }
 .input-box{
-    width: 95%;
+    width: 80%;
     margin: auto;
     display: flex;
     gap: 10px;
@@ -194,7 +196,6 @@
     }
 
     .nav-links:hover {
-        background-color: #1888ff;
         border-radius: 0;
 
     }
@@ -250,7 +251,6 @@
         margin: 2rem auto;
         border-radius: 4px;
         width: 80%;
-        background: #1888ff;
         text-decoration: none;
         color: #fff;
         font-size: 1.5rem;
@@ -259,7 +259,6 @@
 
     .nav-links-mobile:hover {
         background: #fff;
-        color: #1888ff;
         transition: 250ms;
     }
 

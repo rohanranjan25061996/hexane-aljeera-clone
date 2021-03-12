@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     justify-content:center;
     border:0px solid wheat;
     margin:0 auto;
-    width:95%;
+    width:85%;
     
 
 `
