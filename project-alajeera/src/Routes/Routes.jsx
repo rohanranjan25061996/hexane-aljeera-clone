@@ -12,7 +12,9 @@ import Live from '../Pages/Live/Live';
 import { Features } from "../Pages/Features/Features"
 import { FeaturesContent } from "../Pages/Features/FeaturesContent"
 import { Opinion } from "../Pages/Opinion/Opinion";
-import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
+import { Content3 } from "../Pages/Opinion/FullArticle/Content";
+import Search from '../Pages/Search/Search';
+
 
 function AllRoutes() {
   return (
@@ -51,14 +53,16 @@ function AllRoutes() {
         <Route path="/opinion/:id">
           <Content3 />
         </Route>
-
+          <Route path='/search/:title'>
+                    <Search/>
+           </Route>    
             <Route>
                 <h1> 404 Not Found </h1>
-            </Route>
-      </Switch>
-    </>
-  );
-
+            </Route>       
+        </Switch>
+        </>
+    )
+}
 
 
 export { AllRoutes };
