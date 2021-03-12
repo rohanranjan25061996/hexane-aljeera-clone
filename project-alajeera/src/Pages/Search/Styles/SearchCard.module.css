@@ -20,12 +20,18 @@
 
 .details h1 {
     font-size: 30px;
+    text-align: left;
+}
+.details>h1:hover{
+    text-decoration: none;
+    cursor: none;
 }
 
 .details p {
     font-size: 18px;
     line-height: 30px;
     color: #8D8DA3;
+    text-align: left;
 }
 
 .image {

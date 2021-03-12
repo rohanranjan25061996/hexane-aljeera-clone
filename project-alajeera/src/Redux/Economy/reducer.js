@@ -7,12 +7,9 @@ const initState = {
     isError: false,
     data: [],
     filter_data: [],
-    sort_view: []
 }
 
 const economyReducer = ( state = initState, { type, payload } ) => {
-
-    console.log("from reducer  ", type, state.data)
 
     switch(type){
 
@@ -57,7 +54,7 @@ const economyReducer = ( state = initState, { type, payload } ) => {
         }
 
         case SAVE_DATA_LS:{
-            const ls_data = localStorage.setItem("eco", JSON.stringify(state.filter_data))
+           localStorage.setItem("eco", JSON.stringify(state.data))
 
             return{
                 ...state
