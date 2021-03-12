@@ -1,5 +1,6 @@
 import React from 'react';
 import YouTube from 'react-youtube';
+import { FooterContainer } from '../../Common/Footer/Containers/Footer';
 import styles from './Video.module.css';
 const Video = () => {
   const vidArr = [
@@ -18,8 +19,8 @@ const Video = () => {
   ];
   // normal
   const opts = {
-    height: '390',
-    width: '640',
+    height: '340',
+    width: '550',
     playerVars: {
       autoplay: 2,
     },
@@ -44,13 +45,14 @@ const Video = () => {
     event.target.pauseVideo();
   };
   return (
-    <div>
+    <div style={{ background: 'black', color: '#fff', marginTop: '0px' }}>
       <div className={styles.header}>
         <div className={styles.big_card}>
           <h1>"Cristino Ronaldo....The actual GOAT?"</h1>
           <YouTube videoId='cEriFwt3Xi4' opts={opts2} onReady={onReady} />
         </div>
         <div>
+          <br />
           <div>
             <h1>"Top UK scientists warn of new Covid surge if lockdown eased too quickly"</h1>
 
@@ -81,13 +83,16 @@ const Video = () => {
           </div>
         </div>
       </div>
-      {vidArr.map(({ title, link }) => (
-        <div className={styles.vid_card} key={title}>
-          <h1>{title}</h1>
-          <br />
-          <YouTube className={styles.youtube} videoId={link} opts={opts} onReady={onReady} />
-        </div>
-      ))}
+      <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        {vidArr.map(({ title, link }) => (
+          <div className={styles.vid_card} key={title}>
+            <YouTube className={styles.youtube} videoId={link} opts={opts} onReady={onReady} />
+            <br />
+            <h2>{title}</h2>
+          </div>
+        ))}
+      </div>
+      <FooterContainer />
     </div>
   );
 };

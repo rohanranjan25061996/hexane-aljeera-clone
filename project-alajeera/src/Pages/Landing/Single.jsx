@@ -10,7 +10,7 @@ const Single = ({ title, author, description, image, country, source }) => {
         <h2>Source : {source}</h2>
       </div>
       <div>
-        <img width='500px' src={image} alt='news' />
+        <img src={image} alt='news' />
       </div>
     </div>
   );
