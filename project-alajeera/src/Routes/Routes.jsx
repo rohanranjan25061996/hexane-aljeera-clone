@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Route, Switch } from 'react-router';
 import { Content } from '../Pages/Comman/Content';
@@ -14,6 +15,7 @@ import { FeaturesContent } from "../Pages/Features/FeaturesContent"
 import { Opinion } from "../Pages/Opinion/Opinion";
 import { Content3 } from "../Pages/Opinion/FullArticle/Content";
 import Search from '../Pages/Search/Search';
+
 
 
 function AllRoutes() {
@@ -47,6 +49,7 @@ function AllRoutes() {
             <Route path = "/features/:id">
                 <FeaturesContent />
             </Route>
+
         <Route exact path="/opinion">
           <Opinion />
         </Route>
@@ -59,9 +62,16 @@ function AllRoutes() {
             <Route>
                 <h1> 404 Not Found </h1>
             </Route>       
-        </Switch>
-        </>
-    )
+
+        <Route>
+          <h1> 404 Not Found </h1>
+        </Route>
+      </Switch>
+    </>
+  );
+
+          
+   
 }
 
 
