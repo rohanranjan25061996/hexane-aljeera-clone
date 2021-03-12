@@ -14,33 +14,22 @@
   display: flex;
   height: fit-content;
 }
-.card h1:hover {
-  text-decoration: underline;
-}
-.card > div:nth-child(2) {
-  margin: auto;
-  padding: 10px;
-}
-.card img {
-  padding: 30px;
-}
 
 .single__card {
   width: 90%;
-  height: max-content;
+  height: fit-content;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  /* background-color: lightgray; */
-  /* border: 2px solid black; */
   margin: 40px auto;
   display: flex;
 }
 
 .single__card img {
-  /* border: 1px solid black; */
   padding: 20px;
   margin: 20px;
+  width: 500px;
+  border-radius: 15px;
 }
-img:hover {
+.single__card img:hover {
   transform: scale(1.07);
   transition: 500ms;
 }
@@ -48,7 +37,7 @@ img:hover {
   text-decoration: underline;
 }
 .single__card h1 {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   text-align: center;
   margin-top: 10%;

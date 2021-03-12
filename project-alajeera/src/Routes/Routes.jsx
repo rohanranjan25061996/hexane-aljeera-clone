@@ -7,8 +7,12 @@ import { Content2 } from '../Pages/Coronavirus/FullArticle/Content';
 import Landing from '../Pages/Landing/Landing';
 import Navbar from '../Common/Navbar/Navbar';
 import Video from '../Pages/Video/Video';
+import { Content3 } from '../Pages/Opinion/FullArticle/Content';
+import { Features } from '../Pages/Features/Features';
+import { FeaturesContent } from '../Pages/Features/FeaturesContent';
 import { FooterContainer } from '../Common/Footer/Containers/Footer';
 import Live from '../Pages/Live/Live';
+import { Opinion } from '../Pages/Opinion/Opinion';
 
 function AllRoutes() {
   return (
@@ -17,6 +21,12 @@ function AllRoutes() {
       <Switch>
         <Route exact path='/'>
           <Landing />
+        </Route>
+        <Route exact path='/features'>
+          <Features />
+        </Route>
+        <Route path='/features/:id'>
+          <FeaturesContent />
         </Route>
         <Route exact path='/economy'>
           <Economy />
@@ -37,8 +47,19 @@ function AllRoutes() {
         <Route path='/live'>
           <Live />
         </Route>
+
+        <Route exact path='/opinion'>
+          <Opinion />
+        </Route>
+        <Route path='/opinion/:id'>
+          <Content3 />
+        </Route>
+
+        <Route>
+          <h1> 404 Not Found </h1>
+        </Route>
       </Switch>
-      <FooterContainer />
+      {/* <FooterContainer /> */}
     </>
   );
 }
