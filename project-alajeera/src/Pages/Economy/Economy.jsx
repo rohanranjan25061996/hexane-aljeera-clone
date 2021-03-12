@@ -1,39 +1,39 @@
-import React from "react";
-import{ shallowEqual, useDispatch, useSelector } from "react-redux"
-import { filterEcoData, getEconomyData, saveDataInLocalStorage} from "../../Redux/Economy/action";
-import { HeaderData } from "./HeaderData";
-import { ShowEco } from "./ShowEco";
-import { SideEco } from "./SideEco";
-import styles from "../Economy/Styles/Economy.module.css"
-import { useHistory } from "react-router";
-import { FooterContainer } from "../../Common/Footer/Containers/Footer";
-import Loader from "react-loader-spinner"
+import React from 'react';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import {
+  filterEcoData,
+  getEconomyData,
+  saveDataInLocalStorage,
+} from '../../Redux/Economy/action';
+import { HeaderData } from './HeaderData';
+import { ShowEco } from './ShowEco';
+import { SideEco } from './SideEco';
+import styles from '../Economy/Styles/Economy.module.css';
+import { useHistory } from 'react-router';
+import { FooterContainer } from '../../Common/Footer/Containers/Footer';
+import Loader from 'react-loader-spinner';
 
 const footer_styles = {
-    marginTop: "50%"
-} 
+  marginTop: '50%',
+};
 
-function Economy(){
+function Economy() {
+  const { isLoading, isError, filter_data } = useSelector((state) => state.eco, shallowEqual);
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-    const {isLoading, isError, filter_data} = useSelector(state => state.eco, shallowEqual)
-    const dispatch = useDispatch()
-    const history = useHistory()
+  React.useEffect(() => {
+    getData();
+  }, []);
 
-    React.useEffect(() => {
-       getData()
-    }, [])
-
-    const getData = () => {
-
-        dispatch( getEconomyData() )
-        .then((res) => {
-            if(res){
-                dispatch( filterEcoData() )
-                dispatch( saveDataInLocalStorage() )
-            }
-        })
-    }
-
+  const getData = () => {
+    dispatch(getEconomyData()).then((res) => {
+      if (res) {
+        dispatch(filterEcoData());
+        dispatch(saveDataInLocalStorage());
+      }
+    });
+  };
     const redirectToUrl = (id) => {
         history.push(`/economy/${id}`)
     }
@@ -56,8 +56,8 @@ function Economy(){
         <div style = {isLoading ? footer_styles: null}>
             <FooterContainer />
         </div>
-        </>
-    )
+    </>
+  );
 }
 
-export {Economy}
+export { Economy };
