@@ -44,6 +44,7 @@ function Corona(){
         <>
         <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="Bars"
+             className = {styles.loader__show}
         color="#eb7e20"
         height={600}
         width={300}
@@ -57,9 +58,9 @@ function Corona(){
                 </div>}
                 <Advetisement/>
         </div>
-        <div style = {isLoading ? footer_styles: null}>
+        {/* <div style = {isLoading ? footer_styles: null}>
            <FooterContainer />
-        </div>
+        </div> */}
         </>
     )
 }
