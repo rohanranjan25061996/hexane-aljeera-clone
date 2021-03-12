@@ -46,12 +46,11 @@ const getEconomyData = () => dispatch => {
     return Axios.get(process.env.REACT_APP_BASE_URL, {
     })
     .then((res) => {
-        console.log(res)
         dispatch( economyCallSuccess(res.data) )
+        console.log("economy data   ",res.data)
         return { success: true }
     })
     .catch((err) => {
-        console.log(err)
         dispatch( economyCallFail() )
         return { success: false }
     })
@@ -65,9 +64,6 @@ const incViewCount = (data) => dispatch => {
     const url = process.env.REACT_APP_BASE_URL
     return Axios.patch(`${url}/${data.id}`, payload)
     .then((res) => {
-        dispatch( getEconomyData() )
-        console.log(res)
-
         return {success: true}
     })
     .catch((err) => {
