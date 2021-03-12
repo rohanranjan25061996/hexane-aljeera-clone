@@ -1,19 +1,17 @@
-import { ECONOMY_API_CALL_FAIL, ECONOMY_API_CALL_REQUEST, ECONOMY_API_CALL_SUCCESS,
-     FILTER_ECO_DATA, SAVE_DATA_LS} from "./actionType"
+import { FEATURES_API_CALL_FAIL, FEATURES_API_CALL_REQUEST, FEATURES_API_CALL_SUCCESS, FILTER_FEA_DATA, SAVE_DATA_FEA_LS } from "./actionType"
 
 const initState = {
-
+    fea_filter_data: [],
+    fea_data: [],
     isLoading: false,
-    isError: false,
-    data: [],
-    filter_data: [],
+    isError: false
 }
 
-const economyReducer = ( state = initState, { type, payload } ) => {
+const featuresReducer = ( state = initState,  { type, payload } ) => {
 
     switch(type){
 
-        case ECONOMY_API_CALL_REQUEST:{
+        case FEATURES_API_CALL_REQUEST:{
 
             return{
                 ...state,
@@ -22,17 +20,17 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             }
         }
 
-        case ECONOMY_API_CALL_SUCCESS: {
+        case FEATURES_API_CALL_SUCCESS: {
 
             return{
                 ...state,
                 isLoading: false,
                 isError: false,
-                data: payload
+                fea_data: payload
             }
         }
 
-        case ECONOMY_API_CALL_FAIL: {
+        case FEATURES_API_CALL_FAIL: {
 
             return{
                 ...state,
@@ -41,20 +39,21 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             }
         }
 
-        case FILTER_ECO_DATA:{
-            const newData = state.data.filter((item) => {
+        case FILTER_FEA_DATA:{
+            const newData = state.fea_data.filter((item) => {
                 if(item.image != null){
                     return item
                 }
             })
             return{
                 ...state,
-                filter_data: newData
+                fea_filter_data: newData
             }
         }
 
-        case SAVE_DATA_LS:{
-           localStorage.setItem("eco", JSON.stringify(state.data))
+        case SAVE_DATA_FEA_LS: {
+
+            localStorage.setItem("fea", JSON.stringify(state.fea_data))
 
             return{
                 ...state
@@ -66,4 +65,4 @@ const economyReducer = ( state = initState, { type, payload } ) => {
     }
 }
 
-export {economyReducer}
+export {featuresReducer}
