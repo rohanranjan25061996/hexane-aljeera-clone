@@ -8,6 +8,7 @@ import { SideEco } from "../Economy/SideEco";
 import styles from "../Economy/Styles/Economy.module.css";
 import style from "./Opinion.module.css";
 import { useHistory } from "react-router";
+import Advetisement from "../Advertisements/Advetisement";
 
 function Opinion() {
   const { isLoading, isError, data } = useSelector(
@@ -86,9 +87,7 @@ function Opinion() {
                             redirectToUrl={redirectToUrl}
                           />{" "}
                           <tr>
-                            <td>
-                             
-                            </td>
+                            <td></td>
                             <td>
                               <span>
                                 <i
@@ -125,34 +124,30 @@ function Opinion() {
                         key={item.id}
                         redirectToUrl={redirectToUrl}
                       />{" "}
-                       <tr>
-                            <td>
-                             
-                            </td>
-                            <td>
-                              <span>
-                                <i
-                                  style={{
-                                    fontSize: "15px",
-                                    color: "orange",
-                                    float: "left",
-                                    marginLeft: "40px",
-                                  }}
-                                  class="fas fa-quote-left"
-                                ></i>
-                                <p className={style.smallauthor}>
-                                  {" "}
-                                  {item.author}
-                                </p>
-                                <p className={style.date}> {item.date}</p>
-                              </span>
-                            </td>
-                          </tr>
+                      <tr>
+                        <td></td>
+                        <td>
+                          <span>
+                            <i
+                              style={{
+                                fontSize: "15px",
+                                color: "orange",
+                                float: "left",
+                                marginLeft: "40px",
+                              }}
+                              class="fas fa-quote-left"
+                            ></i>
+                            <p className={style.smallauthor}> {item.author}</p>
+                            <p className={style.date}> {item.date}</p>
+                          </span>
+                        </td>
+                      </tr>
                     </tbody>{" "}
                   </table>{" "}
                 </div>
               )
             )}
+            <Advetisement />
           </div>
         )}
       </div>
