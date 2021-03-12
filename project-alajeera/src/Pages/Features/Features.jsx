@@ -43,6 +43,7 @@ function Features(){
          <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="TailSpin"
         color="#eb7e20"
+        className = {styles.loader__show}
         height={600}
         width={300}
         timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>

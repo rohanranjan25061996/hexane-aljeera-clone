@@ -45,6 +45,7 @@ function Opinion() {
         {isLoading ? (
          <Loader type="ThreeDots"
          color="#eb7e20"
+         className = {styles.loader__show}
          height={600}
          width={300}
          timeout={3000} />

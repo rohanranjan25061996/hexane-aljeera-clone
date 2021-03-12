@@ -1,17 +1,13 @@
-import React from 'react';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
-import {
-  filterEcoData,
-  getEconomyData,
-  saveDataInLocalStorage,
-} from '../../Redux/Economy/action';
-import { HeaderData } from './HeaderData';
-import { ShowEco } from './ShowEco';
-import { SideEco } from './SideEco';
-import styles from '../Economy/Styles/Economy.module.css';
-import { useHistory } from 'react-router';
-import { FooterContainer } from '../../Common/Footer/Containers/Footer';
+import React from "react";
+import{ shallowEqual, useDispatch, useSelector } from "react-redux"
+import { filterEcoData, getEconomyData, saveDataInLocalStorage} from "../../Redux/Economy/action";
+import { HeaderData } from "./HeaderData";
+import { ShowEco } from "./ShowEco";
+import { SideEco } from "./SideEco";
+import styles from "../Economy/Styles/Economy.module.css"
+import { useHistory } from "react-router";
 import Loader from 'react-loader-spinner';
+import { FooterContainer } from '../../Common/Footer/Containers/Footer';
 
 const footer_styles = {
   marginTop: '50%',
@@ -39,8 +35,9 @@ function Economy() {
     }
     return(
         <>
-        <div className = {styles.main__page__main}>
+           <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="Circles"
+            className = {styles.loader__show}
         color="#eb7e20"
         height={600}
         width={300}
@@ -53,11 +50,12 @@ function Economy() {
                 }
                 </div>}
         </div>
-        <div style = {isLoading ? footer_styles: null}>
+        {/* <div style = {isLoading ? footer_styles: null}>
             <FooterContainer />
-        </div>
-    </>
-  );
+        </div> */}
+        </>
+    )
+       
 }
 
 export { Economy };
