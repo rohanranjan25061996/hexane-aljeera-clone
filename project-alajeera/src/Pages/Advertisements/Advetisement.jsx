@@ -49,7 +49,7 @@ const Advetisement = () => {
               color: "red",
               fontSize: "25px",
               position: "relative",
-              right: "250px",
+              right: "0",
             }}
             class="fas fa-times-circle"
           >
