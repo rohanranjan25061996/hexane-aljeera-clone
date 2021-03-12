@@ -5,6 +5,7 @@ function HeaderData(data){
     const {description, title, image, id, redirectToUrl} = data
     return(
         <>
+        
         <div className = {styles.header__main__eco} >
             <div className = {styles.header__main__eco__pic}>
                 <img src = {image} alt = {title} width = "500"></img>

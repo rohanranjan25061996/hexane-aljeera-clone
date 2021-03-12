@@ -9,11 +9,14 @@ import Navbar from '../Common/Navbar/Navbar';
 import Video from '../Pages/Video/Video';
 import { FooterContainer } from '../Common/Footer/Containers/Footer';
 import Live from '../Pages/Live/Live';
+import { Features } from "../Pages/Features/Features"
+import { FeaturesContent } from "../Pages/Features/FeaturesContent"
+import { Opinion } from "../Pages/Opinion/Opinion";
+import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
 
 function AllRoutes() {
   return (
     <>
-      <Navbar />
       <Switch>
         <Route exact path='/'>
           <Landing />
@@ -33,14 +36,29 @@ function AllRoutes() {
         <Route path='/video'>
           <Video />
         </Route>
-
         <Route path='/live'>
           <Live />
         </Route>
+      <Route exact path = "/features">
+                <Features />
+            </Route>
+            <Route path = "/features/:id">
+                <FeaturesContent />
+            </Route>
+        <Route exact path="/opinion">
+          <Opinion />
+        </Route>
+        <Route path="/opinion/:id">
+          <Content3 />
+        </Route>
+
+            <Route>
+                <h1> 404 Not Found </h1>
+            </Route>
       </Switch>
-      <FooterContainer />
     </>
   );
-}
+
+
 
 export { AllRoutes };

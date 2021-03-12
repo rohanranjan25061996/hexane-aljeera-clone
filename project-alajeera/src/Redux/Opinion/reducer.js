@@ -1,19 +1,22 @@
-import { ECONOMY_API_CALL_FAIL, ECONOMY_API_CALL_REQUEST, ECONOMY_API_CALL_SUCCESS,
-     FILTER_ECO_DATA, SAVE_DATA_LS} from "./actionType"
-
+import { OPINION_API_CALL_FAIL, OPINION_API_CALL_REQUEST, OPINION_API_CALL_SUCCESS,
+     FILTER_OPINION_DATA} from "./actionType"
+     import { SAVE_DATA_LS } from "../Economy/actionType"
 const initState = {
 
     isLoading: false,
     isError: false,
     data: [],
     filter_data: [],
+    sort_view: []
 }
 
-const economyReducer = ( state = initState, { type, payload } ) => {
+const opinionReducer = ( state = initState, { type, payload } ) => {
+
+    console.log("from reducer  ", type, state.data)
 
     switch(type){
 
-        case ECONOMY_API_CALL_REQUEST:{
+        case OPINION_API_CALL_REQUEST:{
 
             return{
                 ...state,
@@ -22,7 +25,7 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             }
         }
 
-        case ECONOMY_API_CALL_SUCCESS: {
+        case OPINION_API_CALL_SUCCESS: {
 
             return{
                 ...state,
@@ -32,7 +35,7 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             }
         }
 
-        case ECONOMY_API_CALL_FAIL: {
+        case OPINION_API_CALL_FAIL: {
 
             return{
                 ...state,
@@ -41,7 +44,7 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             }
         }
 
-        case FILTER_ECO_DATA:{
+        case FILTER_OPINION_DATA:{
             const newData = state.data.filter((item) => {
                 if(item.image != null){
                     return item
@@ -49,12 +52,12 @@ const economyReducer = ( state = initState, { type, payload } ) => {
             })
             return{
                 ...state,
-                filter_data: newData
+                filter_data: [...state.filter_data , newData]
             }
         }
 
         case SAVE_DATA_LS:{
-           localStorage.setItem("eco", JSON.stringify(state.data))
+          localStorage.setItem("opinion", JSON.stringify(state.filter_data))
 
             return{
                 ...state
@@ -66,4 +69,4 @@ const economyReducer = ( state = initState, { type, payload } ) => {
     }
 }
 
-export {economyReducer}
+export {opinionReducer}

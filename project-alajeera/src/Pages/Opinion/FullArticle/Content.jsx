@@ -2,7 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { useParams } from "react-router"
 import { FooterContainer } from "../../../Common/Footer/Containers/Footer"
-import { incViewCount } from "../../../Redux/Corona/action"
+import { incViewCount } from "../../../Redux/Opinion/action"
 import { Share } from "../../Comman/Share"
 // import { incViewCount, sortDataView } from "..../Redux/Corona/action"
 import { ContentShow } from "./ContentShow"
@@ -11,7 +11,7 @@ import { MostRead } from "./MostRead"
 import { Realated } from "./Related"
 import styles from "./Styles/Content.module.css"
 
-function Content2(){
+function Content3(){
 
     const [data, setData] = React.useState(null)
     const { id } = useParams()
@@ -22,7 +22,7 @@ function Content2(){
     }, [])
 
     const getDataFromLs = () => {
-        let local_data = localStorage.getItem("corona")
+        let local_data = localStorage.getItem("opinion")
        
         local_data = JSON.parse(local_data)
       
@@ -56,9 +56,9 @@ function Content2(){
         <ContentShow />
         <Realated />
         <MostRead />
-        <FooterContainer />
+        <FooterContainer/>
         </>
     )
 }
 
-export {Content2}
+export {Content3}

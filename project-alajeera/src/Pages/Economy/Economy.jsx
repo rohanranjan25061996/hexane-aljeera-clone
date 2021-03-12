@@ -34,68 +34,28 @@ function Economy() {
       }
     });
   };
-
-  const redirectToUrl = (id) => {
-    history.push(`/economy/${id}`);
-  };
-  return (
-    <>
-      <div className={styles.main__page__main}>
-        {isLoading ? (
-          <Loader type='Circles' color='#00BFFF' height={100} width={100} timeout={3000} />
-        ) : isError ? (
-          'Something went wrong'
-        ) : (
-          <div className={styles.main__page__container}>
-            {filter_data &&
-              filter_data.map((item, i) =>
-                i < 5 ? (
-                  <div className={styles.head__side__eco}>
-                    {i === 0 ? (
-                      <div className={styles.header}>
-                        {' '}
-                        <HeaderData
-                          {...item}
-                          key={item.id}
-                          redirectToUrl={redirectToUrl}
-                        />{' '}
-                      </div>
-                    ) : (
-                      <div className={styles.side}>
-                        {' '}
-                        <table>
-                          {' '}
-                          <tbody>
-                            {' '}
-                            <SideEco
-                              {...item}
-                              key={item.id}
-                              redirectToUrl={redirectToUrl}
-                            />{' '}
-                          </tbody>{' '}
-                        </table>{' '}
-                      </div>
-                    )}
-                  </div>
-                ) : (
-                  <div className={styles.showall}>
-                    {' '}
-                    <table>
-                      {' '}
-                      <tbody>
-                        {' '}
-                        <ShowEco {...item} key={item.id} redirectToUrl={redirectToUrl} />{' '}
-                      </tbody>{' '}
-                    </table>{' '}
-                  </div>
-                )
-              )}
-          </div>
-        )}
-      </div>
-      {/* <div style = {isLoading ? footer_styles: null}>
+    const redirectToUrl = (id) => {
+        history.push(`/economy/${id}`)
+    }
+    return(
+        <>
+        <div className = {styles.main__page__main}>
+            {isLoading ? <Loader type="Circles"
+        color="#eb7e20"
+        height={100}
+        width={100}
+        timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
+                {
+                    filter_data && filter_data.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>
+                        {i === 0 ? <div className = {styles.header}>  <HeaderData {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </div> 
+                        : <div className = {styles.side}> <table> <tbody>  <SideEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>}
+                    </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
+                }
+                </div>}
+        </div>
+        <div style = {isLoading ? footer_styles: null}>
             <FooterContainer />
-        </div> */}
+        </div>
     </>
   );
 }
