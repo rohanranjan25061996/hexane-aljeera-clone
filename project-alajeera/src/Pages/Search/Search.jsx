@@ -137,6 +137,7 @@ import SearchCard from './SearchCard';
 import styles from './Styles/Search.module.css';
 import getNewsData from './Utilities/Utilities';
 import Paginate from './Paginate';
+import Loader from 'react-loader-spinner';
 
 
 const Search = () => {
@@ -144,6 +145,7 @@ const Search = () => {
     const [page, setPage] = useState(0);
     const [newsData, setNewsData] = useState([]);
     const [response, setResponse] = useState([]);
+    const [isLoading, setLoading] = useState(false)
 
 
     const prevPage = () => {
@@ -168,11 +170,13 @@ const Search = () => {
         setPage(index);
     }
     const getData = () => {
+        setLoading(true)
         getNewsData(title)
             .then((res) => {
                 console.log(res.data);
                 let dataNewsApi = Paginate(res.data.articles);
                 console.log(dataNewsApi);
+                setLoading(false)
                 setNewsData(dataNewsApi[0]);
                 setResponse(dataNewsApi);
             })
@@ -190,7 +194,13 @@ const Search = () => {
     console.log(newsData);
     return (
         <>  
-            <div className={styles.cards}>
+        {isLoading && <Loader type="Grid"
+        color="#eb7e20"
+        height={600}
+        width={300}
+        className = {styles.loader__show}
+        timeout={3000} />}
+            {!isLoading && <div className={styles.cards}>
                 <div className={styles.title}><p>Search Result for:</p><span>{title.toUpperCase()}</span></div>
                 {
                     newsData?.map((item, i) => {
@@ -199,8 +209,8 @@ const Search = () => {
                         )
                     })
                 }
-            </div>
-            <div className={styles.btnContainer}>
+            </div>}
+            {!isLoading &&  <div className={styles.btnContainer}>
                 <button className={styles.prevBtn} onClick={prevPage}>&#60; Previous</button>
                 {
                     response.map((item,index) => {
@@ -210,7 +220,7 @@ const Search = () => {
                     })
                 }
                 <button className={styles.nextBtn} onClick={nextPage}>Next &#62;</button>
-            </div>
+            </div> }
         </>
         )
 }   

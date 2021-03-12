@@ -1,22 +1,25 @@
+
 import React from 'react';
-import { Route, Switch } from 'react-router';
+import { Route, Switch, useLocation } from 'react-router';
 import { Content } from '../Pages/Comman/Content';
 import { Economy } from '../Pages/Economy/Economy';
 import { Corona } from '../Pages/Coronavirus/Corona';
 import { Content2 } from '../Pages/Coronavirus/FullArticle/Content';
 import Landing from '../Pages/Landing/Landing';
-import Navbar from '../Common/Navbar/Navbar';
 import Video from '../Pages/Video/Video';
-import { FooterContainer } from '../Common/Footer/Containers/Footer';
-import Live from '../Pages/Live/Live';
 import { Features } from "../Pages/Features/Features"
 import { FeaturesContent } from "../Pages/Features/FeaturesContent"
 import { Opinion } from "../Pages/Opinion/Opinion";
-import { Content3 } from "../Pages/Opinion/FullArticle/Content";
+import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
+import Live from '../Pages/Live/Live';
 import Search from '../Pages/Search/Search';
+import { FooterContainer } from '../Common/Footer/Containers/Footer';
 
 
 function AllRoutes() {
+
+  const location = useLocation()
+  console.log("location inside Routes",location)
   return (
     <>
       <Switch>
@@ -39,30 +42,31 @@ function AllRoutes() {
           <Video />
         </Route>
         <Route path='/live'>
-          <Live />
+            <Live />
         </Route>
-      <Route exact path = "/features">
-                <Features />
-            </Route>
-            <Route path = "/features/:id">
-                <FeaturesContent />
-            </Route>
+        <Route exact path = "/features">
+            <Features />
+        </Route>
+        <Route path = "/features/:id">
+            <FeaturesContent />
+        </Route>
         <Route exact path="/opinion">
-          <Opinion />
+            <Opinion />
         </Route>
         <Route path="/opinion/:id">
           <Content3 />
         </Route>
           <Route path='/search/:title'>
-                    <Search/>
+                <Search/>
            </Route>    
             <Route>
                 <h1> 404 Not Found </h1>
             </Route>       
         </Switch>
+        {location.pathname == "/" ? <FooterContainer /> : <div style = {{marginTop: "12%"}}> <FooterContainer /> </div>}
         </>
     )
 }
 
 
-export { AllRoutes };
+export { AllRoutes }

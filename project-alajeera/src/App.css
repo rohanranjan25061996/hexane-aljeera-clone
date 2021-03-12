@@ -1,11 +1,11 @@
-body{
-  font-family: 'Roboto';
+body {
+  font-family: "Roboto";
 }
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -38,4 +38,4 @@ body{
   to {
     transform: rotate(360deg);
   }
-} 
+} */
