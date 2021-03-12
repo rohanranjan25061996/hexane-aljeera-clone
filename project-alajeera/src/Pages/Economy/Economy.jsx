@@ -41,7 +41,7 @@ function Economy(){
         <>
         <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="Circles"
-        color="#00BFFF"
+        color="#eb7e20"
         height={100}
         width={100}
         timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
