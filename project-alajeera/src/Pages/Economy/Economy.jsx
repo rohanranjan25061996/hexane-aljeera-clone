@@ -6,8 +6,11 @@ import { ShowEco } from "./ShowEco";
 import { SideEco } from "./SideEco";
 import styles from "../Economy/Styles/Economy.module.css"
 import { useHistory } from "react-router";
-import Loader from 'react-loader-spinner';
-import { FooterContainer } from '../../Common/Footer/Containers/Footer';
+
+import { FooterContainer } from "../../Common/Footer/Containers/Footer";
+import Loader from "react-loader-spinner"
+import Advetisement from "../Advertisements/Advetisement";
+
 
 const footer_styles = {
   marginTop: '50%',
@@ -49,6 +52,7 @@ function Economy() {
                     </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
+                <Advetisement/>
         </div>
         {/* <div style = {isLoading ? footer_styles: null}>
             <FooterContainer />
