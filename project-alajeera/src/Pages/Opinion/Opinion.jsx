@@ -8,6 +8,12 @@ import { SideEco } from "../Economy/SideEco";
 import styles from "../Economy/Styles/Economy.module.css";
 import style from "./Opinion.module.css";
 import { useHistory } from "react-router";
+import Loader from "react-loader-spinner";
+import { FooterContainer } from "../../Common/Footer/Containers/Footer";
+
+const footer_styles = {
+  marginTop: "50%"
+} 
 
 function Opinion() {
   const { isLoading, isError, data } = useSelector(
@@ -37,7 +43,11 @@ function Opinion() {
     <>
       <div className={styles.main__page__main}>
         {isLoading ? (
-          "...loading"
+         <Loader type="ThreeDots"
+         color="#eb7e20"
+         height={600}
+         width={300}
+         timeout={3000} />
         ) : isError ? (
           "Something went wrong"
         ) : (
@@ -156,6 +166,9 @@ function Opinion() {
           </div>
         )}
       </div>
+      <div style = {isLoading ? footer_styles: null}>
+            <FooterContainer />
+        </div>
     </>
   );
 }

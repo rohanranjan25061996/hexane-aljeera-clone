@@ -34,7 +34,6 @@ function AllRoutes(){
             <Route path = "/corona/:id">
                 <Content2 />
             </Route>
-      </Route>
         <Route exact path="/opinion">
           <Opinion />
         </Route>
