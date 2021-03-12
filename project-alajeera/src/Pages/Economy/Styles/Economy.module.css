@@ -26,9 +26,11 @@
   clear: both;
   padding: 3%;
 }
+
 .header__main__eco__text {
   padding: 3%;
 }
+
 .side {
   width: 47%;
   margin-top: 2%;
@@ -40,6 +42,10 @@
 td > h2 {
   padding: 2%;
 }
+td > h2 {
+  padding: 2%;
+}
+
 .showall {
   width: 50%;
   padding: 1%;
@@ -136,9 +142,10 @@ h2:hover {
     clear: both;
     text-align: center;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 10%;
   }
+
   .showall {
     margin-left: 10%;
   }

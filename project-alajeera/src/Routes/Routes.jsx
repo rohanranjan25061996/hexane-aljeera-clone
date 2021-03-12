@@ -7,6 +7,8 @@ import { Content2 } from '../Pages/Coronavirus/FullArticle/Content';
 import Landing from '../Pages/Landing/Landing';
 import Navbar from '../Common/Navbar/Navbar';
 import Video from '../Pages/Video/Video';
+import { FooterContainer } from '../Common/Footer/Containers/Footer';
+import Live from '../Pages/Live/Live';
 
 function AllRoutes() {
   return (
@@ -31,7 +33,12 @@ function AllRoutes() {
         <Route path='/video'>
           <Video />
         </Route>
+
+        <Route path='/live'>
+          <Live />
+        </Route>
       </Switch>
+      <FooterContainer />
     </>
   );
 }

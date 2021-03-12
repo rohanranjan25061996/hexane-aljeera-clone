@@ -46,29 +46,46 @@ const Video = () => {
   return (
     <div>
       <div className={styles.header}>
-        <div>
+        <div className={styles.big_card}>
           <h1>"Cristino Ronaldo....The actual GOAT?"</h1>
           <YouTube videoId='cEriFwt3Xi4' opts={opts2} onReady={onReady} />
         </div>
         <div>
           <div>
             <h1>"Top UK scientists warn of new Covid surge if lockdown eased too quickly"</h1>
-            <YouTube videoId='NbON1RrE3ZI' opts={opts3} onReady={onReady} />
+
+            <YouTube
+              className={styles.youtube}
+              videoId='NbON1RrE3ZI'
+              opts={opts3}
+              onReady={onReady}
+            />
           </div>
           <div>
             <h1>"The Vanishing of Flight 370"</h1>
-            <YouTube videoId='kd2KEHvK-q8' opts={opts3} onReady={onReady} />
+            <YouTube
+              className={styles.youtube}
+              videoId='kd2KEHvK-q8'
+              opts={opts3}
+              onReady={onReady}
+            />
           </div>
           <div>
             <h1>"Jumping From Space! - Red Bull Space Dive"</h1>
-            <YouTube videoId='E9oKEJ1pXPw' opts={opts3} onReady={onReady} />
+            <YouTube
+              className={styles.youtube}
+              videoId='E9oKEJ1pXPw'
+              opts={opts3}
+              onReady={onReady}
+            />
           </div>
         </div>
       </div>
       {vidArr.map(({ title, link }) => (
         <div className={styles.vid_card} key={title}>
           <h1>{title}</h1>
-          <YouTube videoId={link} opts={opts} onReady={onReady} />
+          <br />
+          <YouTube className={styles.youtube} videoId={link} opts={opts} onReady={onReady} />
         </div>
       ))}
     </div>

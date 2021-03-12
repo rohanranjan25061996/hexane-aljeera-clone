@@ -11,9 +11,7 @@ const initState = {
 }
 
 const coronaReducer = ( state = initState, { type, payload } ) => {
-
-    console.log("from reducer  ", type, state.data)
-
+    
     switch(type){
 
         case CORONA_API_CALL_REQUEST:{
