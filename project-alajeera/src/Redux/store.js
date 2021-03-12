@@ -2,12 +2,20 @@ import { applyMiddleware, compose, createStore, combineReducers } from "redux";
 
 import { economyReducer } from "./Economy/reducer";
 import { coronaReducer } from "./Corona/reducer";
+
+import { opinionReducer } from "./Opinion/reducer";
+
 import { featuresReducer } from "./Features/reducer";
+
 
 const rootReducer = combineReducers({
   eco: economyReducer,
   corona: coronaReducer,
+
+  opinion: opinionReducer,
+
   fea: featuresReducer
+
 });
 
 const customMiddleWare = (store) => (next) => (action) => {

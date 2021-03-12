@@ -1,3 +1,4 @@
+
 import React from "react"
 import { Route, Switch } from "react-router"
 import { Content } from "../Pages/Comman/Content"
@@ -6,6 +7,8 @@ import {Corona} from "../Pages/Coronavirus/Corona"
 import { Content2 } from "../Pages/Coronavirus/FullArticle/Content"
 import { Features } from "../Pages/Features/Features"
 import { FeaturesContent } from "../Pages/Features/FeaturesContent"
+import { Opinion } from "../Pages/Opinion/Opinion";
+import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
 
 function AllRoutes(){
 
@@ -31,6 +34,13 @@ function AllRoutes(){
             <Route path = "/corona/:id">
                 <Content2 />
             </Route>
+      </Route>
+        <Route exact path="/opinion">
+          <Opinion />
+        </Route>
+        <Route path="/opinion/:id">
+          <Content3 />
+        </Route>
 
             <Route>
                 <h1> 404 Not Found </h1>
@@ -38,6 +48,7 @@ function AllRoutes(){
         </Switch>
         </>
     )
+
 }
 
-export {AllRoutes}
+export { AllRoutes };
