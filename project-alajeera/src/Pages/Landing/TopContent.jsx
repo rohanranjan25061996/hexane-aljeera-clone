@@ -50,10 +50,11 @@ const TopContent = () => {
 
   return (
     <div style={{ display: 'flex' }}>
-      <div width='50%'>
+      <div>
         <BigData title={top1.title} image={top1.image} />
       </div>
-      <div width='50%'>
+      <div>
+        <br />
         <Medium title={top3.title} image={top3.image} />
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {top2.map((item) => (

@@ -32,7 +32,7 @@
 .single__card img:hover {
   transform: scale(1.07);
   transition: 500ms;
-}
+} 
 .single__card h1:hover {
   text-decoration: underline;
 }

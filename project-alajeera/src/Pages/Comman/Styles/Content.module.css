@@ -60,9 +60,6 @@
   top: 75%;
 }
 
-.header__view__icon {
-}
-
 .header__views > span {
   position: absolute;
   top: 25%;
@@ -184,4 +181,8 @@ h3 :hover {
   font-weight: bolder;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.loader__show {
+  text-align: left;
 }
