@@ -1,18 +1,15 @@
 import './App.css';
 import { AllRoutes } from './Routes/Routes';
+import { FooterContainer } from './Common/Footer/Containers/Footer';
+import Navbar from './Common/Navbar/Navbar';
 
 function App() {
   return (
-<<<<<<< HEAD
-    <Router>
-      <Navbar />
-      <FooterContainer/>
-    </Router>  
-=======
     <div className="App">
+      <Navbar />
       <AllRoutes />
+      <FooterContainer/>
     </div>
->>>>>>> 3721e79357a4b103546528798c0b3ccfdc58aa2c
   );
 }
 
