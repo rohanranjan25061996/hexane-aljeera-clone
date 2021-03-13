@@ -1,42 +1,34 @@
-import React from "react";
-import{ shallowEqual, useDispatch, useSelector } from "react-redux"
-import { filterCoronaData, getCoronaData} from "../../Redux/Corona/action";
-import { saveDataInLocalStorage} from '../../Redux/Economy/action'
-import { HeaderData } from "../Economy/HeaderData";
-import { ShowEco } from "../Economy/ShowEco";
-import { SideEco } from "../Economy/SideEco";
-import styles from "../Economy/Styles/Economy.module.css"
-import { useHistory } from "react-router";
-import Loader from "react-loader-spinner"
-import { FooterContainer } from "../../Common/Footer/Containers/Footer";
-import Advetisement from "../Advertisements/Advetisement";
+import React from 'react';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { filterCoronaData, getCoronaData } from '../../Redux/Corona/action';
+import { saveDataInLocalStorage } from '../../Redux/Economy/action';
+import { HeaderData } from '../Economy/HeaderData';
+import { SideEco } from '../Economy/SideEco';
+import { ShowEco } from '../Economy/ShowEco';
+import styles from '../Economy/Styles/Economy.module.css';
+import { useHistory } from 'react-router';
+import { FooterContainer } from '../../Common/Footer/Containers/Footer';
 
+function Corona() {
+  const { isLoading, isError, filter_data, data } = useSelector(
+    (state) => state.corona,
+    shallowEqual
+  );
+  const dispatch = useDispatch();
+  const history = useHistory();
 
-const footer_styles = {
-    marginTop: "50%"
-} 
+  React.useEffect(() => {
+    getData();
+  }, []);
 
-function Corona(){
-
-    const {isLoading, isError, filter_data ,data} = useSelector(state => state.corona, shallowEqual)
-    const dispatch = useDispatch()
-    const history = useHistory()
-
-    React.useEffect(() => {
-       getData()
-    }, [])
-
-    const getData = () => {
-
-        dispatch( getCoronaData() )
-        .then((res) => {
-            if(res){
-                dispatch( filterCoronaData() )
-                dispatch( saveDataInLocalStorage() )
-            }
-        })
-    }
-
+  const getData = () => {
+    dispatch(getCoronaData()).then((res) => {
+      if (res) {
+        dispatch(filterCoronaData());
+        dispatch(saveDataInLocalStorage());
+      }
+    });
+  };
     const redirectToUrl = (id) => {
         history.push(`/corona/${id}`)
     }
@@ -63,6 +55,7 @@ function Corona(){
         </div> */}
         </>
     )
+
 }
 
-export {Corona}
+export { Corona };

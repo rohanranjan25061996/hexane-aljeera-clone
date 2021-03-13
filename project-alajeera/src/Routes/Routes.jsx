@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Route, Switch, useLocation } from 'react-router';
 import { Content } from '../Pages/Comman/Content';
@@ -7,24 +6,26 @@ import { Corona } from '../Pages/Coronavirus/Corona';
 import { Content2 } from '../Pages/Coronavirus/FullArticle/Content';
 import Landing from '../Pages/Landing/Landing';
 import Video from '../Pages/Video/Video';
-import { Features } from "../Pages/Features/Features"
-import { FeaturesContent } from "../Pages/Features/FeaturesContent"
-import { Opinion } from "../Pages/Opinion/Opinion";
-import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
+import { Content3 } from '../Pages/Opinion/FullArticle/Content';
+import { Features } from '../Pages/Features/Features';
+import { FeaturesContent } from '../Pages/Features/FeaturesContent';
 import Live from '../Pages/Live/Live';
+import { Opinion } from '../Pages/Opinion/Opinion';
 import Search from '../Pages/Search/Search';
-import { FooterContainer } from '../Common/Footer/Containers/Footer';
-
-
 function AllRoutes() {
-
-  const location = useLocation()
-  console.log("location inside Routes",location)
+  const location = useLocation();
+  console.log('location inside Routes', location);
   return (
     <>
       <Switch>
         <Route exact path='/'>
           <Landing />
+        </Route>
+        <Route exact path='/features'>
+          <Features />
+        </Route>
+        <Route path='/features/:id'>
+          <FeaturesContent />
         </Route>
         <Route exact path='/economy'>
           <Economy />
@@ -42,31 +43,29 @@ function AllRoutes() {
           <Video />
         </Route>
         <Route path='/live'>
-            <Live />
+          <Live />
         </Route>
-        <Route exact path = "/features">
-            <Features />
+        <Route exact path='/features'>
+          <Features />
         </Route>
-        <Route path = "/features/:id">
-            <FeaturesContent />
+        <Route path='/features/:id'>
+          <FeaturesContent />
         </Route>
-        <Route exact path="/opinion">
-            <Opinion />
+        <Route exact path='/opinion'>
+          <Opinion />
         </Route>
-        <Route path="/opinion/:id">
+        <Route path='/opinion/:id'>
           <Content3 />
         </Route>
-          <Route path='/search/:title'>
-                <Search/>
-           </Route>    
-            <Route>
-                <h1> 404 Not Found </h1>
-            </Route>       
-        </Switch>
-        {location.pathname == "/" ? <FooterContainer /> : <div style = {{marginTop: "12%"}}> <FooterContainer /> </div>}
-        </>
-    )
+        <Route path='/search/:title'>
+          <Search />
+        </Route>
+        <Route>
+          <h1> 404 Not Found </h1>
+        </Route>
+      </Switch>
+    </>
+  );
 }
 
-
-export { AllRoutes }
+export { AllRoutes };
