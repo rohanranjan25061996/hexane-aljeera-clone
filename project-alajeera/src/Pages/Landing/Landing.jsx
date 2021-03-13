@@ -29,7 +29,7 @@ const Landing = () => {
         source='CNN'
       /> */}
 
-      <h1>General News</h1>
+      <h1 style = {{textAlign: "center"}}>General News</h1>
       <EconomyWithoutFooter />
       <Single
         title='2022 Kia EV6 Teased, Will Become The Brand’s First Dedicated EV - CarScoops'
@@ -37,7 +37,7 @@ const Landing = () => {
         image='https://www.carscoops.com/wp-content/uploads/2021/03/2022-Kia-ES6.jpg'
         source='IMDB'
       />
-      <h1>Entertainment News</h1>
+      <h1 style = {{textAlign: "center"}}>Entertainment News</h1>
       <OpinionWithoutFooter />
       <Single
         title='Bitcoin Suddenly Soars Toward $60,000 Price—Roaring Past $1 Trillion As Fear Grips Tech Stocks",'
@@ -45,7 +45,7 @@ const Landing = () => {
         image='https://thumbor.forbes.com/thumbor/fit-in/1200x0/filters%3Aformat%28jpg%29/https%3A%2F%2Fspecials-images.forbesimg.com%2Fimageserve%2F602fddbc99a798c04f9de3b0%2F0x0.jpg'
         source='TOI'
       />
-      <h1>Technology News</h1>
+      <h1 style = {{textAlign: "center"}}>Technology News</h1>
       <FeaturesWithoutFooter />
       <Single
         title='How to Tell If You are Being Tracked by Apple AirTags'
@@ -54,7 +54,7 @@ const Landing = () => {
         source='IND'
       />
 
-      <h1>Coronavirus related news</h1>
+      <h1 style = {{textAlign: "center"}}>Coronavirus related news</h1>
       <Corona />
     </div>
   );

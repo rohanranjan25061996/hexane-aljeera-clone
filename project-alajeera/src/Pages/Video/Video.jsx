@@ -48,8 +48,8 @@ const Video = () => {
     <div style={{ background: 'black', color: '#fff', marginTop: '0px' }}>
       <div className={styles.header}>
         <div className={styles.big_card}>
-          <h1>"Cristino Ronaldo....The actual GOAT?"</h1>
-          <YouTube videoId='cEriFwt3Xi4' opts={opts2} onReady={onReady} />
+          <h1>"Senegal protests: Demonstrators demand Ousmane Sonko's release?"</h1>
+          <YouTube videoId='2OFXE767dyo' opts={opts2} onReady={onReady} />
         </div>
         <div>
           <br />

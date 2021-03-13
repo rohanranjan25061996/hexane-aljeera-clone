@@ -8,6 +8,8 @@ import { ShowEco } from '../Economy/ShowEco';
 import styles from '../Economy/Styles/Economy.module.css';
 import { useHistory } from 'react-router';
 import { FooterContainer } from '../../Common/Footer/Containers/Footer';
+import Loader from 'react-loader-spinner';
+import Advetisement from "../Advertisements/Advetisement"
 
 function Corona() {
   const { isLoading, isError, filter_data, data } = useSelector(
@@ -48,7 +50,7 @@ function Corona() {
                     </div> : <div className = {styles.showall}> <table className = {styles.table__1}> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
-                <Advetisement/>
+                {/* <Advetisement /> */}
         </div>
         {/* <div style = {isLoading ? footer_styles: null}>
            <FooterContainer />
