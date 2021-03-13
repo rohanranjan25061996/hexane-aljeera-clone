@@ -1,4 +1,4 @@
-# Hexane - AlaJeera-Clone
+# Hexane - AljaZeera-Clone
 
 # Technologies used
 <li>React
