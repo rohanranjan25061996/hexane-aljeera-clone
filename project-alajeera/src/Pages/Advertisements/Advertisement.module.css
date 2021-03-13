@@ -14,7 +14,58 @@
 .add:hover {
   cursor: pointer;
 }
-.add {
+.ads i {
   position: relative;
   right: 30px;
+  color: red;
+  font-size: 25px;
 }
+.image{
+    width: 500px;
+}
+@media only screen and (max-width: 600px) {
+    .ads {
+        z-index: 2;
+      
+        position: fixed;
+      
+        top: 10%;
+        left: 15%;
+        max-width: 200px;
+        max-height: 200px;
+        
+      }
+      .image{
+          width: 200px;
+      }
+    
+  }
+  @media only screen and (max-width: 480px) {
+    .ads {
+        z-index: 2;
+      
+        position: fixed;
+      
+        top: 10%;
+        left: 15%;
+        max-width: 200px;
+        max-height: 200px;
+        
+      }
+      .image{
+          width: 100px;
+      }
+      .ads i {
+        position: relative;
+        left: 100%;
+        bottom: 100%;
+        color: red;
+        font-size: 15px;
+      }
+     
+    
+  }
+
+  /* fontSize: "25px",
+              position: "relative",
+              right: "0", */

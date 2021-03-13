@@ -182,12 +182,14 @@ const Search = () => {
             })
     }
     useEffect(() => {
-        getData();        
+        getData();   
+        window.scrollTo(0, 0)
     }, [title])
 
     useEffect(() => {
         let pagedata = response[page];
         setNewsData(pagedata)
+        window.scrollTo(0, 0)
     },[page])
 
     console.log(response);

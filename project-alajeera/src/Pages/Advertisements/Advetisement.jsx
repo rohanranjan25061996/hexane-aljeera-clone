@@ -45,18 +45,14 @@ const Advetisement = () => {
           <i
             className={styles.add}
             onClick={() => hideAd(ads[ad].key)}
-            style={{
-              color: "red",
-              fontSize: "25px",
-              position: "relative",
-              right: "0",
-            }}
+        
             class="fas fa-times-circle"
           >
             {" "}
           </i>
           <img
-            style={{ width: "500px" }}
+            className={styles.image}
+            
             src={ads[ad].image}
             alt="ads"
             onClick={() => openInNewTab(ads[ad].link)}
