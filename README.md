@@ -1,4 +1,4 @@
-# Technologies used React CSS Libraries used Redux React-redux Redux-thunk Ant Design React-multi-carousel uuid React-recaptcha React-dom React-modal React-moment React-icons
+# Hexane - AlaJeera-Clone
 
 # Technologies used
 <li>React
