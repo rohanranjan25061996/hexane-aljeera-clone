@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../Video/Video.module.css';
 import YouTube from 'react-youtube';
+import { FooterContainer } from '../../Common/Footer/Containers/Footer';
 const Live = () => {
   const opts2 = {
     height: '580',
@@ -57,6 +58,7 @@ const Live = () => {
           </div>
         ))}
       </div>
+      <FooterContainer />
     </div>
   );
 };

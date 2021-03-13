@@ -2,8 +2,9 @@
   padding: 3%;
   margin: 25px auto;
   font-size: x-large;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  width: 700px;
+  box-shadow: 0 3px 6px rgba(231, 225, 225, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23);
+  width: 640px;
+  height: 500px;
 }
 .live_card {
   padding: 3%;
@@ -14,7 +15,7 @@
 }
 .header {
   width: 1220px;
-  margin: 4% auto !important;
+  margin: 0px auto 4% !important;
   display: flex;
 }
 h1:hover {
@@ -22,7 +23,7 @@ h1:hover {
 }
 .big_card {
   width: 850px !important;
-  margin: 25px 20px;
+  margin: 25px 30px;
   font-size: x-large;
 }
 .live_header {
@@ -38,7 +39,7 @@ h1 {
   transition: 400ms;
 }
 .header > div > div {
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(231, 225, 225, 0.16), 0 3px 6px rgba(255, 255, 255, 0.23);
   padding: 5px;
   margin-bottom: 10px;
 }
