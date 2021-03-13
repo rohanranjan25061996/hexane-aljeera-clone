@@ -126,7 +126,6 @@ function OpinionWithoutFooter() {
             )}
           </div>
         )}
-        <Advetisement />
       </div>
     </>
   );

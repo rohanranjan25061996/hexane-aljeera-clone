@@ -49,7 +49,7 @@ const TopContent = () => {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', margin: "1% auto", width: "85%"}}>
       <div>
         <BigData title={top1.title} image={top1.image} />
       </div>

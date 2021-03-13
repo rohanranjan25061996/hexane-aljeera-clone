@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallowEqual, useSelector } from 'react-redux';
 import { FooterContainer } from '../../Common/Footer/Containers/Footer';
+import Advetisement from '../Advertisements/Advetisement';
 import { EconomyWithoutFooter } from './EconomyWithoutFooter';
 
 const footer_styles = {
@@ -12,6 +13,7 @@ function Economy() {
   return (
     <>
       <EconomyWithoutFooter />
+      <Advetisement />
       <div style={isLoading ? footer_styles : null}>
         <FooterContainer />
       </div>

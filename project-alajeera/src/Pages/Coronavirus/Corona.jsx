@@ -50,7 +50,7 @@ function Corona() {
                     </div> : <div className = {styles.showall}> <table className = {styles.table__1}> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
-                <Advetisement />
+                {/* <Advetisement /> */}
         </div>
         {/* <div style = {isLoading ? footer_styles: null}>
            <FooterContainer />

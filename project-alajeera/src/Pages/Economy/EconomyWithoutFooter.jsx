@@ -79,7 +79,6 @@ function EconomyWithoutFooter() {
               )}
           </div>
         )}
-        <Advetisement />
       </div>
     </>
   );

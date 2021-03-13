@@ -83,7 +83,6 @@ function FeaturesWithoutFooter() {
               )}
           </div>
         )}
-        <Advetisement />
       </div>
       {/* <div style = {isLoading ? footer_styles: null}>
            <FooterContainer />
