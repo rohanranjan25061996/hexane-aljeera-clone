@@ -15,7 +15,13 @@ export const Wrapper = styled.div`
     border:0px solid wheat;
     margin:0 auto;
     width:85%;
-    
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        width:100%;
+    }
+    @media only screen and (max-device-width: 480px) {
+        width:100%;
+    }
 
 `
 export const Column = styled.div`

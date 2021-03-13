@@ -1,3 +1,4 @@
+import Search from '../Pages/Search/Search';
 import React from 'react';
 import { Route, Switch, useLocation } from 'react-router';
 import { Content } from '../Pages/Comman/Content';
@@ -6,12 +7,12 @@ import { Corona } from '../Pages/Coronavirus/Corona';
 import { Content2 } from '../Pages/Coronavirus/FullArticle/Content';
 import Landing from '../Pages/Landing/Landing';
 import Video from '../Pages/Video/Video';
-import { Content3 } from '../Pages/Opinion/FullArticle/Content';
-import { Features } from '../Pages/Features/Features';
-import { FeaturesContent } from '../Pages/Features/FeaturesContent';
 import Live from '../Pages/Live/Live';
-import { Opinion } from '../Pages/Opinion/Opinion';
-import Search from '../Pages/Search/Search';
+import { Features } from "../Pages/Features/Features"
+import { FeaturesContent } from "../Pages/Features/FeaturesContent"
+import { Opinion } from "../Pages/Opinion/Opinion";
+import { Content3 } from "../Pages/Opinion/FullArticle/Content";  
+import { FooterContainer } from '../Common/Footer/Containers/Footer';
 function AllRoutes() {
   const location = useLocation();
   console.log('location inside Routes', location);
@@ -67,5 +68,6 @@ function AllRoutes() {
     </>
   );
 }
+
 
 export { AllRoutes };
