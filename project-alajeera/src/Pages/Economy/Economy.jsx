@@ -48,11 +48,11 @@ function Economy() {
                 {
                     filter_data && filter_data.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>
                         {i === 0 ? <div className = {styles.header}>  <HeaderData {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </div> 
-                        : <div className = {styles.side}> <table> <tbody>  <SideEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>}
-                    </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
+                        : <div className = {styles.side}> <table className = {styles.table__1}> <tbody>  <SideEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>}
+                    </div> : <div className = {styles.showall}> <table className = {styles.table__1}> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
-                <Advetisement/>
+                {/* <Advetisement/> */}
         </div>
         {/* <div style = {isLoading ? footer_styles: null}>
             <FooterContainer />

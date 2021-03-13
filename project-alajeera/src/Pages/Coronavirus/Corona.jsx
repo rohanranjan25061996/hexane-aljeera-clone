@@ -52,8 +52,8 @@ function Corona(){
                 {
                     data?.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>
                         {i === 0 ? <div className = {styles.header}> <p style={{fontSize:"45px", float:"left" ,fontWeight:"350",marginBottom:"20px"}}>Coronavirus Pandemic</p> <HeaderData {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </div> 
-                        : <div  className = {styles.side} > <table> <tbody  >  <SideEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>}
-                    </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
+                        : <div  className = {styles.side} > <table className = {styles.table__1}> <tbody >  <SideEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>}
+                    </div> : <div className = {styles.showall}> <table className = {styles.table__1}> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
                 <Advetisement/>

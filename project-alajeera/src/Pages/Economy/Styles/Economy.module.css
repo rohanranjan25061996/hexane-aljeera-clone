@@ -63,7 +63,68 @@ h2:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-@media only screen and (max-width: 1024px) {
+
+@media only screen and (max-device-width: 480px) {
+  .head__side__eco > .header {
+    clear: both;
+    /* border: 1px solid black; */
+    width: 100%;
+  }
+  .header__main__eco__pic img {
+    width: 100%;
+  }
+
+  .side {
+    clear: both;
+    width: 100%;
+    margin-top: 7%;
+  }
+  .side > table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .showall {
+    width: 100%;
+  }
+  .table__1 img {
+    width: 100%;
+  }
+  .table__1 tr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 900px) {
+  .head__side__eco > .header {
+    border: 1px solid black;
+    width: 100%;
+    margin: auto;
+  }
+  .header__main__eco__pic img {
+    border: 1px solid red;
+    width: 95%;
+  }
+  .side {
+    width: 100%;
+  }
+  .showall {
+    width: 100%;
+  }
+  .table__1 img {
+    width: 100%;
+  }
+  .table__1 tr {
+    width: 100%;
+  }
+}
+
+/* @media only screen and (min-width: 320px) {
+ 
+} */
+/* @media only screen and (max-width: 1024px) {
   .head__side__eco > .header {
     clear: both;
     text-align: center;
@@ -149,7 +210,7 @@ h2:hover {
   .showall {
     margin-left: 10%;
   }
-}
+} */
 
 .loader__show {
   text-align: center;
