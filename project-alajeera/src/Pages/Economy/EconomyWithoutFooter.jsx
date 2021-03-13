@@ -12,6 +12,7 @@ import styles from '../Economy/Styles/Economy.module.css';
 import { useHistory } from 'react-router';
 import { FooterContainer } from '../../Common/Footer/Containers/Footer';
 import Loader from 'react-loader-spinner';
+import Advetisement from '../Advertisements/Advetisement';
 
 const footer_styles = {
   marginTop: '50%',
@@ -42,7 +43,8 @@ function EconomyWithoutFooter() {
     <>
       <div className={styles.main__page__main}>
         {isLoading ? (
-          <Loader type='Circles' color='#eb7e20' height={100} width={100} timeout={3000} />
+          <Loader type='Circles' color='#eb7e20'  height={600}
+          width={300} timeout={3000} className = {styles.loader__show} />
         ) : isError ? (
           'Something went wrong'
         ) : (
@@ -57,7 +59,7 @@ function EconomyWithoutFooter() {
                       </div>
                     ) : (
                       <div className={styles.side}>
-                        <table>
+                        <table className = {styles.table__1}>
                           <tbody>
                             <SideEco {...item} key={item.id} redirectToUrl={redirectToUrl} />
                           </tbody>
@@ -67,7 +69,7 @@ function EconomyWithoutFooter() {
                   </div>
                 ) : (
                   <div className={styles.showall}>
-                    <table>
+                    <table className = {styles.table__1}>
                       <tbody>
                         <ShowEco {...item} key={item.id} redirectToUrl={redirectToUrl} />
                       </tbody>
@@ -77,6 +79,7 @@ function EconomyWithoutFooter() {
               )}
           </div>
         )}
+        <Advetisement />
       </div>
     </>
   );

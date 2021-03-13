@@ -8,6 +8,8 @@ import { SideEco } from '../Economy/SideEco';
 import styles from '../Economy/Styles/Economy.module.css';
 import style from './Opinion.module.css';
 import { useHistory } from 'react-router';
+import Loader from 'react-loader-spinner';
+import Advetisement from '../Advertisements/Advetisement';
 
 function OpinionWithoutFooter() {
   const { isLoading, isError, data } = useSelector((state) => state.opinion, shallowEqual);
@@ -34,7 +36,8 @@ function OpinionWithoutFooter() {
     <>
       <div className={styles.main__page__main}>
         {isLoading ? (
-          '...loading'
+          <Loader type='ThreeDots' color='#eb7e20'  height={600}
+          width={300} timeout={3000} className = {styles.loader__show} />
         ) : isError ? (
           'Something went wrong'
         ) : (
@@ -123,6 +126,7 @@ function OpinionWithoutFooter() {
             )}
           </div>
         )}
+        <Advetisement />
       </div>
     </>
   );
