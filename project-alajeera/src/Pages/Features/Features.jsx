@@ -43,8 +43,9 @@ function Features(){
          <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="TailSpin"
         color="#eb7e20"
-        height={100}
-        width={100}
+        className = {styles.loader__show}
+        height={600}
+        width={300}
         timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
                 {
                     fea_filter_data && fea_filter_data.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>

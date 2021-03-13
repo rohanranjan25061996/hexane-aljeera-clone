@@ -185,3 +185,7 @@ h3 :hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
+.loader__show {
+  text-align: left;
+}

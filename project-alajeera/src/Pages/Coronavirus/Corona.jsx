@@ -9,6 +9,8 @@ import styles from "../Economy/Styles/Economy.module.css"
 import { useHistory } from "react-router";
 import Loader from "react-loader-spinner"
 import { FooterContainer } from "../../Common/Footer/Containers/Footer";
+import Advetisement from "../Advertisements/Advetisement";
+
 
 const footer_styles = {
     marginTop: "50%"
@@ -42,9 +44,10 @@ function Corona(){
         <>
         <div className = {styles.main__page__main}>
             {isLoading ? <Loader type="Bars"
+             className = {styles.loader__show}
         color="#eb7e20"
-        height={100}
-        width={100}
+        height={600}
+        width={300}
         timeout={3000} /> : isError ? "Something went wrong" : <div className = {styles.main__page__container}>
                 {
                     data?.map((item, i) => i < 5 ? <div className = {styles.head__side__eco}>
@@ -53,10 +56,11 @@ function Corona(){
                     </div> : <div className = {styles.showall}> <table> <tbody> <ShowEco {...item} key = {item.id} redirectToUrl = {redirectToUrl} /> </tbody> </table> </div>)
                 }
                 </div>}
+                <Advetisement/>
         </div>
-        <div style = {isLoading ? footer_styles: null}>
+        {/* <div style = {isLoading ? footer_styles: null}>
            <FooterContainer />
-        </div>
+        </div> */}
         </>
     )
 }

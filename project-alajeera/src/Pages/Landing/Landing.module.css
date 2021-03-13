@@ -40,10 +40,10 @@
   padding: 20px;
   margin: 20px;
 }
-img:hover {
+/* img:hover {
   transform: scale(1.07);
   transition: 500ms;
-}
+} */
 .single__card h1:hover {
   text-decoration: underline;
 }
