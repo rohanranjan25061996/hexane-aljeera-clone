@@ -9,7 +9,6 @@ const footer_styles = {
 
 function Economy() {
   const { isLoading, isError, filter_data } = useSelector((state) => state.eco, shallowEqual);
-
   return (
     <>
       <EconomyWithoutFooter />

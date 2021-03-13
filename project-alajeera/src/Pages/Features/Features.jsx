@@ -19,5 +19,4 @@ const Features = () => {
     </div>
   );
 };
-
 export { Features };
