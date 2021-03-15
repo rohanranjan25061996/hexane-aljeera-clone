@@ -32,7 +32,7 @@ const BigData = ({ title, image }) => {
             <br /> with extended family.
           </p>
         </div>
-        <div>
+        <div style = {{marginTop: "5%"}}>
           <h3>
             <li>Transcript of Biden’s first prime-time national address</li>
           </h3>

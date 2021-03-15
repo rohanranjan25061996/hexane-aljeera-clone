@@ -25,6 +25,7 @@ function EconomyWithoutFooter() {
 
   React.useEffect(() => {
     getData();
+    window.scroll(0, 0)
   }, []);
 
   const getData = () => {

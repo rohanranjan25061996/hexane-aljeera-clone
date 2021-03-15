@@ -19,6 +19,7 @@ function Content(){
 
     React.useEffect(() => {
         getDataFromLs()
+        window.scroll(0, 0)
     }, [])
 
     const getDataFromLs = () => {
