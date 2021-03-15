@@ -6,6 +6,12 @@ export const Container = styled.div`
     background:black;
     border:0px solid wheat;
     font-family: 'Roboto', sans-serif;
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        width:100%;
+    }
+    @media only screen and (max-device-width: 480px) {
+        width:140%;
+    }
 `
 
 export const Wrapper = styled.div`
@@ -14,8 +20,14 @@ export const Wrapper = styled.div`
     justify-content:center;
     border:0px solid wheat;
     margin:0 auto;
-    width:95%;
-    
+    width:85%;
+
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        width:100%;
+    }
+    @media only screen and (max-device-width: 480px) {
+        width:100%;
+    }
 
 `
 export const Column = styled.div`

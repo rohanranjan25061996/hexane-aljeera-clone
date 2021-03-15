@@ -1,15 +1,14 @@
-# hexane-aljeera-clone
+# Hexane - AljaZeera-Clone
 
 # Technologies used
-
 <li>React
 <li> React-Redux
 <li> HTML
 <li> CSS
 <li> Javascript
 
-# Libraries used
 
+# Libraries used
 <li> axios
 <li> react
 <li> react-adsense

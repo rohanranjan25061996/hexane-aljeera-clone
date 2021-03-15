@@ -1,11 +1,14 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { useParams } from "react-router"
-import { incViewCount, sortDataView } from "../../Redux/Economy/action"
+import { FooterContainer } from "../../Common/Footer/Containers/Footer"
+import { getEconomyData, incViewCount, saveDataInLocalStorage} from "../../Redux/Economy/action"
 import { ContentShow } from "./ContentShow"
 import { Header } from "./Header"
+import { MetaData } from "./MetaData"
 import { MostRead } from "./MostRead"
 import { Realated } from "./Related"
+import { Share } from "./Share"
 import styles from "./Styles/Content.module.css"
 
 function Content(){
@@ -16,6 +19,7 @@ function Content(){
 
     React.useEffect(() => {
         getDataFromLs()
+        window.scroll(0, 0)
     }, [])
 
     const getDataFromLs = () => {
@@ -32,9 +36,18 @@ function Content(){
         console.log(payload)
 
         dispatch( incViewCount( payload ) )
+        .then((res) => {
+            if(res.success){
+                dispatch( getEconomyData() )
+                .then((res) => {
+                    if(res.success){
+                        dispatch( saveDataInLocalStorage() )
+                    }
+                })
+            }
+        })
 
     }
-
     return(
         <>
         {data && data.map((item) => <Header key = {item.id} {...item} />)}
@@ -42,11 +55,16 @@ function Content(){
             {data && data.map((item) =><div key = {item.id} className = {styles.content__show__data}> 
             <img src = {item.image} alt = {item.title} width = "800"></img>
             <p> {item.description} </p>
+           <div className = {styles.content__fb__share}>
+           <Share />
+           </div>
+            {/* <MetaData title = {item.title} image = {item.image} description = {item.description} /> */}
              </div> )}
         </div>
         <ContentShow />
         <Realated />
         <MostRead />
+        <FooterContainer />
         </>
     )
 }
