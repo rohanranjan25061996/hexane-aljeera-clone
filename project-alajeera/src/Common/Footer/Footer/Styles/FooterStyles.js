@@ -6,6 +6,12 @@ export const Container = styled.div`
     background:black;
     border:0px solid wheat;
     font-family: 'Roboto', sans-serif;
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+        width:100%;
+    }
+    @media only screen and (max-device-width: 480px) {
+        width:140%;
+    }
 `
 
 export const Wrapper = styled.div`

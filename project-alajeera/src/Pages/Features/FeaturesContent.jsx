@@ -19,6 +19,7 @@ function FeaturesContent(){
 
     React.useEffect(() => {
         getDataFromLs()
+        window.scroll(0, 0)
     }, [])
 
     const getDataFromLs = () => {
