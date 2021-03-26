@@ -47,16 +47,9 @@ const Video = () => {
   return (
     <div style={{ background: 'black', color: '#fff', marginTop: '0px' }}>
       <div className={styles.header}>
-        <div style={{ width: '900px' }} className={styles.big_card}>
-          <br />
-          <h1>"Cristino Ronaldo....The actual GOAT?"</h1>
-          <br />
-          <YouTube
-            className={styles.youtube}
-            videoId='cEriFwt3Xi4'
-            opts={opts2}
-            onReady={onReady}
-          />
+        <div className={styles.big_card}>
+          <h1>"Senegal protests: Demonstrators demand Ousmane Sonko's release?"</h1>
+          <YouTube videoId='2OFXE767dyo' opts={opts2} onReady={onReady} />
         </div>
         <div className={styles.side_card}>
           <br />

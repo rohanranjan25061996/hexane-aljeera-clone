@@ -49,14 +49,14 @@ const TopContent = () => {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div style={{ display: 'flex', margin: '1% auto', width: '85%' }}>
       <div>
         <BigData title={top1.title} image={top1.image} />
       </div>
       <div>
         <br />
         <Medium title={top3.title} image={top3.image} />
-        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', marginLeft: '15px' }}>
           {top2.map((item) => (
             <div>
               <SmallData {...item} />

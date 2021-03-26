@@ -44,7 +44,7 @@ const Live = () => {
         </p>
         <YouTube
           className={styles.live_header}
-          videoId='9Auq9mYxFEE'
+          videoId='-upyPouRrB8'
           opts={opts2}
           autoplay={true}
         />

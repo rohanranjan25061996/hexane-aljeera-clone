@@ -12,19 +12,14 @@
 }
 .title {
   border: 0px solid black;
-  width: 58%;
+  /* width: 58%; */
+  margin: 10px 67% 0px 10%;
+  /* text-align: left; */
   color: #8d8da3;
-  position: relative;
 }
-.title p {
-  font-size: 18px;
-}
-.title > span {
-  font-weight: bold;
-  position: absolute;
-  top: -10%;
-  left: 17%;
-  font-size: 20px;
+.title span {
+  margin: 4px;
+  font-size: x-large;
 }
 .btnContainer {
   border: 0px solid black;

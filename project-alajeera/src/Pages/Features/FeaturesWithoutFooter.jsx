@@ -8,6 +8,8 @@ import {
   getfeaturesData,
   saveDataInLocalStorageFea,
 } from '../../Redux/Features/action';
+
+import Advetisement from '../Advertisements/Advetisement';
 import { HeaderData } from '../Economy/HeaderData';
 import { ShowEco } from '../Economy/ShowEco';
 import { SideEco } from '../Economy/SideEco';
@@ -82,9 +84,6 @@ function FeaturesWithoutFooter() {
           </div>
         )}
       </div>
-      {/* <div style = {isLoading ? footer_styles: null}>
-           <FooterContainer />
-        </div> */}
     </>
   );
 }
