@@ -1,5 +1,3 @@
-# hexane-aljeera-clone
-
 # Hexane - AljaZeera-Clone
 
 # Technologies used
