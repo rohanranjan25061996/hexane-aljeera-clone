@@ -43,6 +43,7 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin-left: 70px;
   text-align: center;
+  padding-top: 10px;
 }
 .medium_data img {
   padding: 10px;
