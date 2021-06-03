@@ -1,10 +1,7 @@
 .main > h1 {
   font-size: 50px;
 }
-.main > h1:hover {
-  transform: scale(1.05);
-  transition: 400ms;
-}
+
 .card {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   /* border: 1px solid black; */
@@ -21,21 +18,16 @@
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   margin: 40px auto;
   display: flex;
+  text-align: center;
 }
 
 .single__card img {
   padding: 20px;
   margin: 20px;
-  width: 500px;
+  width: 60%;
   border-radius: 15px;
 }
-.single__card img:hover {
-  transform: scale(1.07);
-  transition: 500ms;
-} 
-.single__card h1:hover {
-  text-decoration: underline;
-}
+
 .single__card h1 {
   font-size: 30px;
   font-weight: 700;
@@ -47,4 +39,9 @@
 .single__card p {
   padding: 2%;
   font-size: 16px;
+}
+@media screen and (max-width: 480px) {
+  .single__card {
+    flex-direction: column;
+  }
 }

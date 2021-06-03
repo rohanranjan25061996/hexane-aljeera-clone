@@ -1,10 +1,8 @@
 .ads {
   z-index: 2;
-
   position: absolute;
-
   top: 130%;
-  left: 70%;
+  left: 68%;
   max-width: 500px;
   max-height: 500px;
 }

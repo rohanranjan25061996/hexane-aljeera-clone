@@ -51,7 +51,7 @@ const Video = () => {
           <h1>"Senegal protests: Demonstrators demand Ousmane Sonko's release?"</h1>
           <YouTube videoId='2OFXE767dyo' opts={opts2} onReady={onReady} />
         </div>
-        <div>
+        <div className={styles.side_card}>
           <br />
           <div>
             <h1>"Top UK scientists warn of new Covid surge if lockdown eased too quickly"</h1>
