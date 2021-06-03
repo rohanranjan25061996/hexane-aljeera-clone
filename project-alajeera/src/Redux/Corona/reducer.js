@@ -50,7 +50,7 @@ const coronaReducer = ( state = initState, { type, payload } ) => {
             })
             return{
                 ...state,
-                filter_data: [...state.filter_data , newData]
+                filter_data: newData
             }
         }
 
