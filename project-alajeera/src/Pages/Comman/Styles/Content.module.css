@@ -68,14 +68,6 @@
   font-weight: bolder;
 }
 
-/* E - Headers */
-
-/* S - Realted Show */
-
-.related__show__data {
-  /* border: 1px solid green; */
-}
-
 .realted__head {
   width: 12%;
   display: flex;
@@ -87,15 +79,15 @@
 
 .related__text,
 .most__read__text {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 300;
 }
 
 .related__dot,
 .most__read__dot {
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   background-color: #ed8e02;
 }
 

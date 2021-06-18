@@ -8,6 +8,7 @@ import {
   getfeaturesData,
   saveDataInLocalStorageFea,
 } from '../../Redux/Features/action';
+
 import Advetisement from '../Advertisements/Advetisement';
 import { HeaderData } from '../Economy/HeaderData';
 import { ShowEco } from '../Economy/ShowEco';
@@ -48,8 +49,7 @@ function FeaturesWithoutFooter() {
     <>
       <div className={styles.main__page__main}>
         {isLoading ? (
-          <Loader type='TailSpin' color='#eb7e20'  height={600}
-          width={300} timeout={3000} className = {styles.loader__show} />
+          <Loader type='TailSpin' color='#eb7e20' height={100} width={100} timeout={3000} />
         ) : isError ? (
           'Something went wrong'
         ) : (
@@ -64,7 +64,7 @@ function FeaturesWithoutFooter() {
                       </div>
                     ) : (
                       <div className={styles.side}>
-                        <table className = {styles.table__1}>
+                        <table>
                           <tbody>
                             <SideEco {...item} key={item.id} redirectToUrl={redirectToUrl} />
                           </tbody>
@@ -74,7 +74,7 @@ function FeaturesWithoutFooter() {
                   </div>
                 ) : (
                   <div className={styles.showall}>
-                    <table className = {styles.table__1}>
+                    <table>
                       <tbody>
                         <ShowEco {...item} key={item.id} redirectToUrl={redirectToUrl} />
                       </tbody>
@@ -85,9 +85,6 @@ function FeaturesWithoutFooter() {
           </div>
         )}
       </div>
-      {/* <div style = {isLoading ? footer_styles: null}>
-           <FooterContainer />
-        </div> */}
     </>
   );
 }
