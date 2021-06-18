@@ -9,6 +9,7 @@ const footer_styles = {
 };
 
 function Economy() {
+  // these are all state from Economy Redux.
   const { isLoading, isError, filter_data } = useSelector((state) => state.eco, shallowEqual);
   return (
     <>

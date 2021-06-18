@@ -27,8 +27,8 @@ function Content2(){
        
         local_data = JSON.parse(local_data)
       
-        let ok = local_data[0].filter((item) => item.id == id)
-        console.log("id is" , id)
+        let ok = local_data.filter((item) => item.id == id)
+        console.log("OK from Corona Content => ", ok)
         setData(ok)
        
         const payload = {

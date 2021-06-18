@@ -16,14 +16,13 @@ function MostRead(){
 
     const getData = () => {
         let local_data = localStorage.getItem("corona")
-      
         local_data = JSON.parse(local_data)
         console.log("most read",local_data)
-        local_data[0].sort((a, b) => {
+        local_data.sort((a, b) => {
             return b.view - a.view
         })
 
-        setData(local_data[0])
+        setData(local_data)
         console.log("local sort data  ", local_data)
     }
 

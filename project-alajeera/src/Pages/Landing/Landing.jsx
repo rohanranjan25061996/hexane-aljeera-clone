@@ -34,7 +34,7 @@ const Landing = () => {
       <Single
         title='2022 Kia EV6 Teased, Will Become The Brand’s First Dedicated EV - CarScoops'
         description='The EV6 could have up to 302 hp.'
-        image='https://www.carscoops.com/wp-content/uploads/2021/03/2022-Kia-ES6.jpg'
+        image='https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https%3A%2F%2Fcdni.autocarindia.com%2FGalleries%2F20190806050125_GT_05567-01-01.jpg&h=578&w=872&c=1'
         source='IMDB'
       />
       <h1 style = {{textAlign: "center"}}>Entertainment News</h1>

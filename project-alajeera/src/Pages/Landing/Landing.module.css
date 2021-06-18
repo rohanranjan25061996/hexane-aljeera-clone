@@ -32,7 +32,7 @@
 .single__card img:hover {
   transform: scale(1.07);
   transition: 500ms;
-} 
+}
 .single__card h1:hover {
   text-decoration: underline;
 }
@@ -47,4 +47,8 @@
 .single__card p {
   padding: 2%;
   font-size: 16px;
+}
+
+.single__card > div {
+  text-align: center;
 }

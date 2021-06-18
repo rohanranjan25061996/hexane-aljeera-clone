@@ -15,7 +15,7 @@
 
 .content__show__data > img {
   text-align: left;
-  border: 5px solid black;
+  padding: 8px;
 }
 
 .content__fb__share {
@@ -129,6 +129,10 @@
   justify-content: space-evenly;
 }
 
+.most__read__data > div > img {
+  padding: 5px;
+}
+
 .most__read__data > div > h3 {
   cursor: pointer;
 }
@@ -170,6 +174,7 @@ h3 :hover {
   border: none;
   border-bottom: 1px solid grey;
   font-size: 15px;
+  padding: 10px;
 }
 
 .subscribe__input > div {
